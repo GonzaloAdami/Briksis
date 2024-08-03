@@ -1,0 +1,103 @@
+.formulario-compra{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 80%;
+    background-image: linear-gradient(to left, #002cb0, rgb(25, 109, 253));
+    z-index: 200;
+    padding: 2em;
+    gap: 1em;
+    border-radius: 10px;
+}
+
+.fog::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+h3{
+    color: aliceblue;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.input-data{
+    border-radius: 20px;
+    padding: 0 0.5em;
+    border: none;
+    width: 130%;
+}
+.input-data:focus{
+    outline: none;
+}
+.button-submit{
+    border: none;
+    padding: 0 2em;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 1em;
+
+}
+.body-compra-realizada{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 80%;
+    background-image: linear-gradient(to right, #1500ff, rgb(162, 0, 255));
+    border-radius: 20px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    gap: 1em;
+}
+.title-compra-finalizada {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    
+}
+.description-compra-finalizada{
+    color: aliceblue;
+    font-size: 1em;
+    min-height: 50%;
+}
+
+.volver-button{
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 1em;
+    background-color: aliceblue;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    
+}
+.buttons-form-container{
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+@media (max-width: 800px){
+    .body-compra-realizada, .formulario-compra{
+        width: 90%;
+        height: 60%;
+    }
+}

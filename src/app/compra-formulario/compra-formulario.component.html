@@ -1,0 +1,31 @@
+
+<div class="fog">
+    <form class="formulario-compra" #formularioCompra (submit)="onSubmit(formularioCompra)" *ngIf="!this.compraFinalizada">
+        <label for="numero">
+            <h3>Número de la tarjeta</h3>
+            <input class="input-data" type="number" id="numero" placeholder="Número de tarjeta" name="numero" required>
+        </label>
+        <label for="vencimiento">
+            <h3>Vencimiento</h3>
+            <input class="input-data" type="date" id="vencimiento" name="vencimiento" min="2023-01-01" max="2030-12-31" required>
+        </label>
+        <label for="nombre">
+            <h3>Nombre</h3>
+            <input class="input-data" type="text" id="nombre" placeholder="Nombre" name="nombre" required>
+        </label>
+        <label for="cvv">
+            <h3>CVV</h3>
+            <input class="input-data" type="number" id="cvv" placeholder="CVV" name="cvv" required>
+        </label>
+        <div class="buttons-form-container">
+            <input class="button-submit" type="submit" value="Enviar"> 
+            <button class="button-submit" (click)="app.iniciarCompra = false"> Volver</button>
+        </div>
+    </form>
+
+    <div class="body-compra-realizada" *ngIf="this.compraFinalizada">
+        <h3 class="title-compra-finalizada"> ¡TU COMPRA ESTÁ LISTA!</h3>
+        <p class="description-compra-finalizada"> Tu compra está finalizada. Gracias por comprar en Briksis. En unos minutos llegará tu pedido.</p>
+        <button class="volver-button" (click)="app.iniciarCompra = false">Volver al inicio</button>
+    </div>
+</div>
