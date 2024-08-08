@@ -26,7 +26,8 @@
 
 
 .body-welcome{
-background-image: linear-gradient(to left, #0009b0, #0f6fff);
+background-image: linear-gradient(to right, #001233db 25%, #0466c800);
+position: absolute;
 display: flex;
 flex-direction: column;
 gap: 1em;
@@ -35,7 +36,14 @@ align-items: start;
 text-align: start;
 width: 100%;
 height: 100%;
+top: 0;
+left: 0;
 padding: 4em;
+z-index: 1000;
+border-radius: 0px 0px 100px 100px;
+}
+.body-welcome > * {
+    z-index: 1000;
 }
 
 
@@ -48,25 +56,27 @@ color: #d3d3d3;
 }
 .dulce{
     font-weight: bold;
-    background: linear-gradient(to right, #7ececa, #c7ede8);
+    background: linear-gradient(to right, #0466C8, #2090ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  
 }
 .description-banner{
 font-size: 1.3em;
 font-weight: 600;
-max-width: 50em;
+max-width: 25em;
 color: #e9e9e9ea;
 }
 
 .pedirYa{   
     border-radius: 20px;
-    background-color: rgb(233, 234, 235);
+    background-image: linear-gradient(to right, #049ac8, #2090ff);
     border: none;
-    color: #0f6fff;
+    color: #ffffff;
     font-size: 1.5em;
     font-weight: bold;
     padding: 0em 1.5em;
+    
 
 }
 .carrito{
@@ -75,12 +85,15 @@ color: #e9e9e9ea;
 }
 
 .left-banner{
+    position: relative;
     height: 100%;
-    width: 60em;
+    width: 100vw;
     background-image: url(../../assets/img/bg.webp);
     background-position: center;
     background-repeat: center;
     background-size: cover;
+    z-index: -1;
+    border-radius: 0px 0px 100px 100px;
 }
 
 @media (max-width: 800px){
@@ -88,10 +101,18 @@ color: #e9e9e9ea;
         flex-direction: column;
     }
     .body-welcome{
-        width: 100vw;
+        max-width: 100%;
         padding:4em 2em;
         gap: 1em;
         z-index: 1;
+        border-radius: 20px;
+    }
+    .left-banner{
+        min-width: 100%;
+        border-radius: 20px;
+        max-width: 100%;
+        
+
     }
    
     .title-banner{
@@ -103,4 +124,5 @@ color: #e9e9e9ea;
         align-items: center;
         width: 100%;
     }
+   
   }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PortadaComponent } from './portada/portada.component';
 import { ProductComponent } from './product/product.component';
 import { CompraFormularioComponent } from './compra-formulario/compra-formulario.component';
+import { lista } from './product/list';
 
 
 @NgModule({
@@ -13,13 +14,14 @@ import { CompraFormularioComponent } from './compra-formulario/compra-formulario
     AppComponent,
     PortadaComponent,
     ProductComponent,
-    CompraFormularioComponent
+    CompraFormularioComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [lista],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

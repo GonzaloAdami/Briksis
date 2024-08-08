@@ -1,4 +1,10 @@
-
+<nav  id="navbar" *ngIf="showNavbar === true" >
+        <ul class="lista">
+            <img src="" alt="" class="logo">
+            <li class="precio-total">${{this.Lista.calcularTotal()}}</li>
+            <button class="btn" (click)="iniciarCompra = true">Pedir</button>
+        </ul>
+</nav>
     <app-portada></app-portada>
     <app-product id="productos"></app-product>
     <app-compra-formulario *ngIf="this.iniciarCompra"></app-compra-formulario>

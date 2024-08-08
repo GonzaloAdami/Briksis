@@ -1,52 +1,43 @@
-<section class="body-section-products">
-    <header class="body-all-products">
-        <article class="body-product" *ngFor="let product of this.productos">
-            <div class="img-and-name">
-                <div class="img-product" style="background-image: url(../../assets/img/{{product.img}}.webp);"></div>
-                <div class="name-and-description">
-                    <h3 class="product-name">{{product.name}}</h3>
-                    <p class="product-description">{{product.description}}</p>
-                </div>
-            </div>
-            <div class="operations-and-price">
-                <article class="contador-product">
-                    <button 
-                        id="restar"
-                        class="button-operations" 
-                        (click)="restar(product)">
-                            -
-                    </button>
-                
-                    <p 
-                        class="contador" 
-                        id="contador">
-                        {{product.cantidad}}
-                    </p>
-                
-                    <button 
-                        id="sumar" 
-                        class="button-operations" 
-                        (click)="sumar(product)">
-                            +
-                    </button>
-                </article>
-                
-                <p class="price">${{product.price}}</p>
-            </div>
-        </article>
-    </header>
-    <footer class="body-carrito">
-        <header class="head-carrito">
-            <h3 class="titulo-carrito">CARRITO DE PRODUCTOS</h3>
-            <p class="description-carrito">Lista de productos de la compra</p>
-            <ol class="lista-carrito" *ngFor="let product of this.listaCarrito">             
-                    <li class="item-lista" >{{product.name}} ({{product.cantidad}}) ${{product.price}}</li>
-            </ol>
-        </header>
-        <footer >
-            <p class="text-total-carrito">TOTAL A PAGAR: <span class="total-number">$ {{this.total}}</span> </p>
-        </footer>
-        <button class="buy-button" (click)="app.iniciarCompra = true">IR A PAGAR</button>
-    </footer>
-</section>
 
+<section class="body-section-product">
+    <!-- Box productos-->
+    <main class="box-product">
+
+        <!-- Producto -->
+        <article class="body-product" *ngFor="let product of this.Lista.productos">
+            <!-- Imagen del producto -->
+            <header class="imagen-product" style="background-image: url(../../assets/img/{{product.img}}.webp);"></header>
+            
+            <!-- Informacion del producto -->
+            <div class="name-and-description">
+
+                <!-- Nombre y descripcion -->
+                <h3 class="product-name">{{product.name}}</h3>
+                <p class="product-description">{{product.description}}</p>
+            
+            </div>
+
+          
+            <!-- Systema de agregar producto -->
+            <footer class="price-and-buttons">
+                <header class="operations-and-price">
+                    <button id="restar" class="button-operations" (click)="product.restar()"> - </button>
+
+                    <p class="contador" id="contador">  {{product.cantidad}} </p>
+
+                    <!-- Producto -->
+                    <button id="sumar" class="button-operations" (click)="product.sumar()">  + </button>
+                </header>
+                
+                <p class="precio">${{product.price}}</p>
+                
+                <!-- Boton para restar-->
+                
+                
+            </footer>
+
+        </article>
+
+    </main>
+
+</section>

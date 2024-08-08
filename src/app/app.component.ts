@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-
+import { Component, OnInit,HostListener, ChangeDetectorRef , Inject } from '@angular/core';
+import { lista } from './product/list';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,11 +7,23 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class AppComponent {
   iniciarCompra: boolean;
-constructor(){
+  showNavbar: boolean = false;
+  
+  constructor(private changeDetectorRef: ChangeDetectorRef, public Lista : lista){
   this.iniciarCompra = false;
 }
  
-  ngOnInit() {
-   
+  ngOnInit(): void {
+  
   }
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    if(window.scrollY){
+      this.showNavbar = true;
+    }else{
+      this.showNavbar = false;
+    }
+  }
+  
+  
 }

@@ -8,9 +8,10 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
-    height: 80%;
-    background-image: linear-gradient(to left, #002cb0, rgb(25, 109, 253));
-    z-index: 200;
+    
+    min-height: auto;
+    background-image: linear-gradient(to left, #023E7D, #0466C8);
+    z-index: 1000;
     padding: 2em;
     gap: 1em;
     border-radius: 10px;
@@ -24,7 +25,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 100;
+    z-index: 1000;
 }
 h3{
     color: aliceblue;
@@ -37,6 +38,7 @@ h3{
     padding: 0 0.5em;
     border: none;
     width: 130%;
+    height: 2em;
 }
 .input-data:focus{
     outline: none;
@@ -58,12 +60,12 @@ h3{
     transform: translate(-50%, -50%);
     width: 30%;
     height: 80%;
-    background-image: linear-gradient(to right, #1500ff, rgb(162, 0, 255));
+    background-image: linear-gradient(to right, #0466C8, #0353A4);
     border-radius: 20px;
     padding: 2em;
     display: flex;
     flex-direction: column;
-    z-index: 100;
+    z-index: 1000;
     gap: 1em;
 }
 .title-compra-finalizada {

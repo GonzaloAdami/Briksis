@@ -1,0 +1,50 @@
+#navbar {
+    position: fixed;
+    width: 100vw;
+    background-color: #0466C8;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    /* Remove display: block; */
+    z-index: 1000;
+    border-radius: 0px 0px 20px 20px;
+    height: 4em;
+    
+  }
+  
+
+  .lista{
+    list-style: none;
+    display: flex;
+    float: left;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    padding: 0em 1em;
+    gap: 2em;
+  }
+  .precio-total{
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f5f1f1 ;
+    width: 6em;
+    height: auto;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 0em 2em;
+    color: #001233;
+  }
+
+  @media (max-width: 800px) {
+    #navbar{
+      max-width: 100%;
+    }
+  }
+  
